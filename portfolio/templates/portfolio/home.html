@@ -1,0 +1,135 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block content %}
+    <section class="profile">
+        <h2>{{ profile.name }}</h2>
+        <p>{{ profile.title }}</p>
+        <p>{{ profile.bio }}</p>
+    </section>
+
+    <section class="profile-container">
+        <!-- Left Side: Information -->
+        <div class="profile-info">
+            <h2>Python(Odoo) Developer</h2>
+            <p class="bio">{{ profile.bio }}</p>
+            <div class="personal-info">
+                <p>Name: Aman Manandhar</p>
+                <p>Gender: Male</p>
+                <p>Address: Banasthali, Kathmandu</p>
+                <h3>I am currently doing Bachelors in Computer Application. I have finished my internship and working in Debugsoft Pvt Ltd. I like working dynamically on different languages and projects. As of now, I am engaged in technologies like Python, Odoo (open-source), Postgres, FastAPI, and Django. Also, my abilities to use the technologies are below:</h3>
+
+                <!-- Technology Star Ratings -->
+                <div class="rating">
+                    <h4>Technologies Rating:</h4>
+                    <div class="stars">
+                        <div class="technology">
+                            <p>Python:</p>
+                            <div class="star-rating">
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star">☆</span>
+                            </div>
+                        </div>
+
+                        <div class="technology">
+                            <p>Odoo:</p>
+                            <div class="star-rating">
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star">★</span>
+                                <span class="star">☆</span>
+                            </div>
+                        </div>
+
+                        <div class="technology">
+                            <p>Postgres:</p>
+                            <div class="star-rating">
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star">☆</span>
+                            </div>
+                        </div>
+
+                        <div class="technology">
+                            <p>Django:</p>
+                            <div class="star-rating">
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star">☆</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side: Profile Image -->
+        <div class="profile-image">
+            <img src="{% static 'images/aman.jpeg' %}" alt="Profile Picture">
+        </div>
+    </section>
+
+    <!-- Familiar Technologies Section -->
+    <section class="familiar-technologies" style="background-color: #333;">
+        <h3>Familiar Technologies</h3>
+        <div class="tech-logos">
+            <div class="tech-logo">
+                <img src="{% static 'images/css-logo.png' %}" alt="CSS Logo">
+            </div>
+            <div class="tech-logo">
+                <img src="{% static 'images/js-logo.png' %}" alt="JavaScript Logo">
+            </div>
+            <div class="tech-logo">
+                <img src="{% static 'images/html-logo.png' %}" alt="HTML Logo">
+            </div>
+            <div class="tech-logo">
+                <img src="{% static 'images/fastapi-logo.png' %}" alt="FastAPI Logo">
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" style="background-color: #696969;">
+        <h3>My Projects</h3>
+        <div class="project-boxes">
+            <div class="project-box">
+                <img src="{% static 'images/project1.jpg' %}" alt="Project 1">
+                <p>Project 1</p>
+            </div>
+            <div class="project-box">
+                <img src="{% static 'images/project2.jpg' %}" alt="Project 2">
+                <p>Project 2</p>
+            </div>
+            <div class="project-box">
+                <img src="{% static 'images/project3.jpg' %}" alt="Project 3">
+                <p>Project 3</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connect with Me Section -->
+    <section class="social-media">
+        <div class = "social-info">
+        <h3>Connect with Me</h3>
+        </div>
+        <div class="social-links" style="display: flex; justify-content: center; gap: 20px;">
+            <a href="https://www.instagram.com/_aman.py" target="_blank" class="social-icon">
+                <img src="{% static 'images/instagram-icon.png' %}" alt="Instagram" style="width: 60px; height: 60px;">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100074613233144" target="_blank" class="social-icon">
+                <img src="{% static 'images/facebook-icon.png' %}" alt="Facebook" style="width: 60px; height: 60px;">
+            </a>
+            <a href="https://www.linkedin.com/in/aman-manandhar-003a83266/" target="_blank" class="social-icon">
+                <img src="{% static 'images/linkedin-icon.png' %}" alt="LinkedIn" style="width: 60px; height: 60px;">
+            </a>
+        </div>
+    </section>
+
+{% endblock %}

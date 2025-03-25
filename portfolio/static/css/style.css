@@ -1,0 +1,293 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: grey; /* Light background color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure full height for body */
+}
+
+/* Header */
+header {
+    background-color: #333; /* Dark background for the header */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: normal;
+}
+
+/* Profile Section */
+.profile-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the top */
+    padding: 50px 10%;
+    background-color: #A9A9A9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 30px;
+    position: relative; /* Set relative positioning for the container */
+    flex-grow: 1; /* Allow this section to take up remaining space */
+}
+
+/* Left Side: Information */
+.profile-info {
+    flex: 1;
+    padding: 20px;
+    font-family: 'Georgia', serif;
+    font-style: italic; /* Cursive style */
+}
+
+.profile-info h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Right Side: Profile Image */
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Circular profile image */
+    overflow: hidden; /* Ensure anything outside the circle is hidden */
+    border: 5px solid #333; /* Optional border for the profile image */
+    position: absolute; /* Use absolute positioning */
+    top: 10px; /* Place it 10px from the top */
+    right: 10px; /* Place it 10px from the right */
+}
+
+/* Ensure the image inside the profile-image container is responsive and maintains the circle shape */
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire circle */
+}
+
+/* Footer */
+footer {
+    background-color: #333; /* Dark background for footer */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+/* Footer links */
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Rating Section */
+.rating h4 {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 40px; /* Increased space between rating heading and stars */
+}
+
+/* Stars Container */
+.stars {
+    display: flex; /* Ensure stars are in a row */
+    justify-content: flex-start; /* Align the stars to the left */
+    gap: 30px; /* Increased space between stars */
+}
+
+.star {
+    font-size: 1.5rem; /* Slightly larger stars */
+    color: transparent; /* Make unfilled stars transparent */
+    border: 2px solid #000; /* Black border for unfilled stars */
+    width: 15px; /* Reduced width */
+    height: 15px; /* Reduced height */
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); /* Star shape */
+    background-color: white; /* White background for unfilled stars */
+}
+
+.star.filled {
+    color: black; /* Fill color for filled stars */
+    background-color: black; /* Filled stars should be black */
+    border: none; /* Remove border from filled stars */
+}
+
+/* Additional styling for better layout */
+.profile-info h3 {
+    font-size: 1.1rem;
+    color: #555;
+    font-style: italic;
+}
+
+/* Familiar Technologies Section */
+.familiar-technologies {
+    padding: 20px 0;
+    text-align: center;
+    background-color: grey; /* Dark grey background */
+    color: black; /* White text color for contrast */
+
+}
+
+.familiar-technologies h3 {
+    font-size: 2.0rem; /* Increased size for heading */
+    color: white;
+    font-family: 'Georgia', serif;
+    font-style: italic; /* Cursive style */
+    margin-bottom: 20px;
+}
+
+.tech-logos {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Increased gap for better spacing */
+    flex-wrap: wrap; /* Allows wrapping if the screen is smaller */
+}
+
+.tech-logo img {
+    width: 100px; /* Increased size of logos */
+    height: 100px;
+    object-fit: contain;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover Effect for Tech Logos */
+.tech-logo img:hover {
+    transform: scale(1.4); /* Further enlarge the logos */
+    filter: brightness(1.2); /* Slightly brighten the logo on hover */
+}
+
+/* Projects Section */
+.projects {
+    background-color: #A9A9A9; /* Light grey background for projects */
+    padding: 40px 0;
+    text-align: center;
+    text-color: white;
+}
+
+.projects h3 {
+    font-size: 2.0rem; /* Increased size for heading */
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+    font-style: italic; /* Cursive style */
+}
+
+.project-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Increased gap for better spacing */
+    flex-wrap: wrap; /* Allows wrapping if the screen is smaller */
+}
+
+.project-box {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px; /* Increased width */
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.project-box img {
+    width: 100%;
+    height: 200px; /* Increased height for project images */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.project-box p {
+    font-size: 1.5rem; /* Increased font size */
+    margin-top: 10px;
+}
+
+.project-box:hover {
+    transform: scale(1.05); /* Hover effect for the project box */
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .profile-info {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .profile-image {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .profile-image img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .tech-logos {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .tech-logo img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .project-boxes {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+.social-media {
+    padding: 20px 0;
+    text-align: center;
+    background-color: grey; /* Dark grey background */
+    color: black; /* White text color for contrast */
+
+
+}
+
+.social-info h3{
+    font-size: 50.0rem; /* Increased size for heading */
+    color: black;
+    font-family: 'Georgia', serif;
+    font-style: italic; /* Cursive style */
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icon img:hover {
+    transform: scale(1.2);
+}
